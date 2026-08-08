@@ -1,0 +1,151 @@
+{
+  "dataset": "Self-built USRP OTA dataset",
+  "candidate_pool_size": 98,
+  "top_k": 24,
+  "selected_priors": [
+    {
+      "rank": 1,
+      "index": 90,
+      "name": "corr_extra_01",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 2,
+      "index": 96,
+      "name": "corr_extra_07",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 3,
+      "index": 91,
+      "name": "corr_extra_02",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 4,
+      "index": 50,
+      "name": "hoc_12",
+      "category": "hoc"
+    },
+    {
+      "rank": 5,
+      "index": 92,
+      "name": "corr_extra_03",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 6,
+      "index": 95,
+      "name": "corr_extra_06",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 7,
+      "index": 88,
+      "name": "spec_extra_09",
+      "category": "spectrum_extra"
+    },
+    {
+      "rank": 8,
+      "index": 80,
+      "name": "spec_extra_01",
+      "category": "spectrum_extra"
+    },
+    {
+      "rank": 9,
+      "index": 25,
+      "name": "m_power_01",
+      "category": "m_power"
+    },
+    {
+      "rank": 10,
+      "index": 93,
+      "name": "corr_extra_04",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 11,
+      "index": 24,
+      "name": "m_power_00",
+      "category": "m_power"
+    },
+    {
+      "rank": 12,
+      "index": 18,
+      "name": "spectrum_shape_02",
+      "category": "spectrum_shape"
+    },
+    {
+      "rank": 13,
+      "index": 85,
+      "name": "spec_extra_06",
+      "category": "spectrum_extra"
+    },
+    {
+      "rank": 14,
+      "index": 94,
+      "name": "corr_extra_05",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 15,
+      "index": 89,
+      "name": "corr_extra_00",
+      "category": "corr_extra"
+    },
+    {
+      "rank": 16,
+      "index": 78,
+      "name": "ifreq_extra_07",
+      "category": "ifreq_extra"
+    },
+    {
+      "rank": 17,
+      "index": 51,
+      "name": "env_extra_00",
+      "category": "env_extra"
+    },
+    {
+      "rank": 18,
+      "index": 0,
+      "name": "env_stat_00",
+      "category": "env_stat"
+    },
+    {
+      "rank": 19,
+      "index": 19,
+      "name": "spectrum_shape_03",
+      "category": "spectrum_shape"
+    },
+    {
+      "rank": 20,
+      "index": 55,
+      "name": "env_extra_04",
+      "category": "env_extra"
+    },
+    {
+      "rank": 21,
+      "index": 64,
+      "name": "phase_extra_01",
+      "category": "phase_extra"
+    },
+    {
+      "rank": 22,
+      "index": 72,
+      "name": "ifreq_extra_01",
+      "category": "ifreq_extra"
+    },
+    {
+      "rank": 23,
+      "index": 11,
+      "name": "inst_freq_01",
+      "category": "inst_freq"
+    },
+    {
+      "rank": 24,
+      "index": 67,
+      "name": "phase_extra_04",
+      "category": "phase_extra"
+    }
+  ]
+}

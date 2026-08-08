@@ -1,0 +1,65 @@
+# Principal DPS-CF settings reported in the paper.
+# This file is descriptive and is not a complete training configuration.
+
+data:
+  input_channels: 2
+  input_length: 1024
+
+prior_pool:
+  total_dim: 98
+  base_physical_statistical_dim: 38
+  hoc_statistical_dim: 13
+  extended_statistical_dim: 47
+  selected_dim: 24
+  standardization: training_subset_statistics
+
+selector:
+  logistic_regression:
+    penalty: l1
+    C: 0.1
+    solver: saga
+  extra_trees:
+    n_estimators: 400
+  mutual_information:
+    enabled: true
+  aggregation:
+    normalization: criterion_wise
+    weights: [0.333333, 0.333333, 0.333333]
+  top_k: 24
+
+model:
+  backbone:
+    type: CNN-LSTM
+    feature_dim: 128
+    frozen_during_fusion: true
+
+  prior_projection:
+    dims: [24, 64, 64]
+    hidden_activation: relu
+    dropout: 0.25
+
+  scalar_gate:
+    dims: [24, 32, 1]
+    hidden_activation: relu
+    output_activation: sigmoid
+
+  fusion:
+    backbone_dim: 128
+    prior_embedding_dim: 64
+    fused_dim: 192
+
+  classifier:
+    dims: [192, 256, 128]
+    hidden_activation: relu
+    dropout: 0.30
+    output_dim: dataset_dependent
+
+fusion_training:
+  optimizer: AdamW
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-4
+  batch_size: 512
+  max_epochs: 80
+  early_stopping_patience: 10
+  label_smoothing: 0.05
+  gate_regularization: 1.0e-3
