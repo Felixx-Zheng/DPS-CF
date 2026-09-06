@@ -6,7 +6,7 @@ The pool is ordered as:
 
 ```text
 0–37   Base physical/statistical descriptors (38)
-38–50  HOC/statistical descriptors (13)
+38–50  HOC-related descriptors (13)
 51–97  Extended descriptors (47)
 ```
 
