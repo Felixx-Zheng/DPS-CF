@@ -52,17 +52,17 @@ Projection: 24 → 64 → 64
 Gate:       24 → 32 → 1 → sigmoid
 ```
 
-The gate output \(\alpha\) rescales the projected prior embedding \(e_p\). The final representation is
+The gate output $\alpha$ rescales the projected prior embedding $e_p$. The final representation is
 
-\[
-z=[h;\alpha e_p],
-\]
+$$
+z = [h; \alpha e_p],
+$$
 
-with \(h\in\mathbb{R}^{128}\) and \(e_p\in\mathbb{R}^{64}\). The fused 192-dimensional representation is classified by a
+with $h \in \mathbb{R}^{128}$ and $e_p \in \mathbb{R}^{64}$. The fused 192-dimensional representation is classified by a
 
-```text
-192 → 256 → 128 → C
-```
+$$
+192 \rightarrow 256 \rightarrow 128 \rightarrow C
+$$
 
 MLP. During fusion training, the CNN-LSTM backbone remains frozen.
 
