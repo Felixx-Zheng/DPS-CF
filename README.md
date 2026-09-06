@@ -98,7 +98,7 @@ Detailed acquisition and partitioning information is provided in [`docs/DATASET_
 
 ### RML2018.01A
 
-RML2018.01A contains 2,555,904 examples from 24 modulation classes with SNRs from -20 to 30 dB in 2-dB steps. Each example is a \(2\times1024\) I/Q sequence. A fixed class-SNR-stratified split assigns approximately half of the samples to training and half to testing; validation data are drawn from the training portion.
+RML2018.01A contains 2,555,904 examples from 24 modulation classes with SNRs from -20 to 30 dB in 2-dB steps. Each example is a \(2*1024\) I/Q sequence. A fixed class-SNR-stratified split assigns approximately half of the samples to training and half to testing; validation data are drawn from the training portion.
 
 This repository does not redistribute RML2018.01A.
 
