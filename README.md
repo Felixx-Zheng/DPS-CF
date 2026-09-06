@@ -33,7 +33,7 @@ The prior selector operates offline on training-set prior vectors and labels:
 98-D candidate prior pool
         │
         ├── sparse LR
-        ├── ExtraTrees
+        ├── ET
         └── mutual information
                 │
         criterion normalization
