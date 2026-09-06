@@ -7,7 +7,7 @@ DPS-CF separates two operations that are often coupled in prior-assisted automat
 1. **Scenario-level prior selection** from a broad deterministic candidate pool.
 2. **Sample-level complementary fusion** of the selected priors with a frozen deep I/Q representation.
 
-The selector combines sparse logistic regression (LR), ExtraTrees (ET), and mutual information (MI). The selected Top-\(k\) priors are projected to a compact embedding, rescaled by a sample-wise scalar gate, and concatenated with a pretrained CNN-LSTM representation.
+The selector combines sparse logistic regression (LR), Extremely Randomized Trees (ET), and mutual information (MI). The selected Top-\(k\) priors are projected to a compact embedding, rescaled by a sample-wise scalar gate, and concatenated with a pretrained CNN-LSTM representation.
 
 > This repository is a compact reference release for the accompanying paper. It documents the method structure, the common 98-dimensional prior pool, the selected Top-24 subsets, and the USRP data-construction protocol. It does **not** include the complete training/evaluation pipeline, pretrained checkpoints, internal data loaders, experiment orchestration code, or raw datasets.
 
@@ -73,7 +73,7 @@ Both the self-built USRP dataset and RML2018.01A use the **same 98-dimensional c
 | Component | Dimensions |
 |---|---:|
 | Base physical/statistical descriptors | 38 |
-| Higher-order cumulant/statistical descriptors | 13 |
+| HOC-related statistical block | 13 |
 | Extended statistics | 47 |
 | **Total** | **98** |
 
