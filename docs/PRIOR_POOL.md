@@ -115,26 +115,46 @@ The names below follow the reference extraction code used to construct the share
 | 96 | `corr_extra_07` | Correlation extra | Ratio of maximum to mean absolute normalized autocorrelation over lags 1–32. |
 | 97 | `corr_extra_08` | Correlation extra | Sum of zero-crossing rates of the real and imaginary components after complex-mean removal. |
 
-## Higher-order/statistical definitions
+## HOC-related statistical block
 
-For the 13-dimensional HOC/statistical block, the complex sequence is first normalized by its mean signal power. The reference block uses the moments
+For consistency with the manuscript, these 13 dimensions are grouped under the HOC-related prior category for compact presentation. The block includes higher-order cumulants and moments, together with several normalized envelope and spectral statistics implemented in the same reference feature block.
 
-\[M_{20}=E[x^2],\quad M_{21}=E[|x|^2],\quad M_{40}=E[x^4],\quad M_{42}=E[|x|^4],\]
+For this 13-dimensional block, the complex sequence is first normalized by its mean signal power. The reference block uses the moments
 
-\[M_{60}=E[x^6],\quad M_{63}=E[|x|^6],\quad M_{80}=E[x^8],\quad M_{84}=E[|x|^8].\]
+$$
+M_{20}=E[x^2], \quad
+M_{21}=E[|x|^2], \quad
+M_{40}=E[x^4], \quad
+M_{42}=E[|x|^4].
+$$
 
-The cumulant-like quantities used by the reference extractor include:
+$$
+M_{60}=E[x^6], \quad
+M_{63}=E[|x|^6], \quad
+M_{80}=E[x^8], \quad
+M_{84}=E[|x|^8].
+$$
 
-\[C_{40}=M_{40}-3M_{20}^2,\]
+The cumulant-like quantities used by the reference extractor include
 
-\[C_{42}=M_{42}-|M_{20}|^2-2M_{21}^2,\]
+$$
+C_{40}=M_{40}-3M_{20}^2,
+$$
 
-\[C_{63}=M_{63}-9M_{42}M_{21}+12M_{21}^3,\]
+$$
+C_{42}=M_{42}-|M_{20}|^2-2M_{21}^2,
+$$
 
-\[C_{80}=M_{80}-35M_{40}^2-28M_{60}M_{20}+420M_{40}M_{20}^2-630M_{20}^4.\]
+$$
+C_{63}=M_{63}-9M_{42}M_{21}+12M_{21}^3,
+$$
 
-The remaining HOC/statistical dimensions are envelope statistics of the power-normalized sequence and the maximum centered periodogram value.
+$$
+C_{80}=M_{80}-35M_{40}^2-28M_{60}M_{20}
++420M_{40}M_{20}^2-630M_{20}^4.
+$$
 
+The remaining dimensions in this HOC-related statistical block are envelope statistics of the power-normalized sequence and the maximum centered periodogram value.
 ## Pool composition
 
 | Group | Size |
