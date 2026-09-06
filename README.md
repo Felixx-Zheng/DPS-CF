@@ -137,18 +137,6 @@ DPS-CF/
     └── prior_extractor_reference.py
 ```
 
-## Citation
-
-If this repository is useful in your work, please cite the accompanying paper:
-
-```bibtex
-@misc{zheng2026dpscf,
-  title  = {Decoupled Prior Selection and Complementary Fusion for Automatic Modulation Classification},
-  author = {Zuotao Zheng and Xiaoling Hu and Qin Tao and Fengxian Guo and Mugen Peng},
-  year   = {2026},
-  note   = {Manuscript}
-}
-```
 
 ## Copyright
 
