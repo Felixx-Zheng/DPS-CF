@@ -100,7 +100,7 @@ $$P_{n,\mathrm{add}}=\max\left(P_{n,\mathrm{target}} - P_{n,\mathrm{hw}},0\right
 
 Complex Gaussian noise is generated as
 
-$$w[n]=\sqrt{\frac{P_{n,\mathrm{add}}}{2}}\left(u[n] + jv[n]\right),\qquadu[n],v[n] \sim \mathcal{N}(0,1),$$
+$$w[n]=\sqrt{\frac{P_{n,\mathrm{add}}}{2}}\left(u[n] + jv[n]\right)$$
 
 and the augmented signal is
 
