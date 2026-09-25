@@ -60,37 +60,25 @@ The original OTA recordings already contain receiver noise. The augmentation pro
 
 For the same fixed acquisition system, local window energy is calculated as
 
-$$
-E_k = \frac{1}{L}\sum_{n=k}^{k+L-1}|x[n]|^2.
-$$
+$$E_k = \frac{1}{L}\sum_{n=k}^{k+L-1}|x[n]|^2.$$
 
 Low-energy windows corresponding to noise-only intervals are used to estimate the receiver-noise power. The resulting value used in the experiment is
 
-$$
-P_{n,\mathrm{hw}} = 3.1149 \times 10^{-6}.
-$$
+$$P_{n,\mathrm{hw}} = 3.1149 \times 10^{-6}.$$
 
 This value is measured from the acquisition system rather than introduced as an empirical constant.
 
 For a complex received sequence $c[n] = I[n] + jQ[n]$,
 
-$$
-P_{\mathrm{raw}} = \frac{1}{N}\sum_n |c[n]|^2,
-$$
+$$P_{\mathrm{raw}} = \frac{1}{N}\sum_n |c[n]|^2,$$
 
 and the effective signal power is estimated as
 
-$$
-P_s = \max\left(P_{\mathrm{raw}} - P_{n,\mathrm{hw}},\,10^{-10}\right).
-$$
+$$P_s = \max\left(P_{\mathrm{raw}} - P_{n,\mathrm{hw}},\,10^{-10}\right).$$
 
 The corresponding estimated raw SNR is
 
-$$
-\mathrm{SNR}_{\mathrm{raw}}
-=
-10\log_{10}\left(\frac{P_s}{P_{n,\mathrm{hw}}}\right).
-$$
+$$\mathrm{SNR}_{\mathrm{raw}}=10\log_{10}\left(\frac{P_s}{P_{n,\mathrm{hw}}}\right).$$
 
 The raw acquisition frames used in the experiments were checked to have estimated SNR values above 20 dB.
 
@@ -104,39 +92,19 @@ The target SNR levels are
 
 For target SNR $\gamma_{\mathrm{dB}}$, the required **total** noise power is
 
-$$
-P_{n,\mathrm{target}}
-=
-\frac{P_s}{10^{\gamma_{\mathrm{dB}}/10}}.
-$$
+$$P_{n,\mathrm{target}}=\frac{P_s}{10^{\gamma_{\mathrm{dB}}/10}}.$$
 
 Because the recorded OTA waveform already contains the measured hardware noise, only the additional noise power required to reach the target is added:
 
-$$
-P_{n,\mathrm{add}}
-=
-\max\left(
-P_{n,\mathrm{target}} - P_{n,\mathrm{hw}},
-0
-\right).
-$$
+$$P_{n,\mathrm{add}}=\max\left(P_{n,\mathrm{target}} - P_{n,\mathrm{hw}},0\right).$$
 
 Complex Gaussian noise is generated as
 
-$$
-w[n]
-=
-\sqrt{\frac{P_{n,\mathrm{add}}}{2}}
-\left(u[n] + jv[n]\right),
-\qquad
-u[n],v[n] \sim \mathcal{N}(0,1),
-$$
+$$w[n]=\sqrt{\frac{P_{n,\mathrm{add}}}{2}}\left(u[n] + jv[n]\right),\qquadu[n],v[n] \sim \mathcal{N}(0,1),$$
 
 and the augmented signal is
 
-$$
-c_{\mathrm{aug}}[n] = c[n] + w[n].
-$$
+$$c_{\mathrm{aug}}[n] = c[n] + w[n].$$
 
 Thus, the target SNR construction combines the measured receiver-noise component already present in the OTA recording with the additional software-generated AWGN.
 
