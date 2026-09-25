@@ -79,6 +79,10 @@ Both the self-built USRP dataset and RML2018.01A use the **same 98-dimensional c
 
 The complete dimension ordering and definitions are listed in [`docs/PRIOR_POOL.md`](docs/PRIOR_POOL.md).
 
+Additional experiment and reproducibility details are provided in
+[`docs/EXPERIMENT_DETAILS.md`](docs/EXPERIMENT_DETAILS.md), including the
+network configuration, selector settings, validation protocol, selector
+stability analysis, matched gate ablation, and baseline reproduction notes.
 The final Top-24 selections are provided in:
 
 - [`metadata/selected_priors_usrp.json`](metadata/selected_priors_usrp.json)
@@ -125,6 +129,7 @@ DPS-CF/
 │   └── dps_cf_framework.png
 ├── docs/
 │   ├── DATASET_USRP.md
+│   ├── EXPERIMENT_DETAILS.md
 │   └── PRIOR_POOL.md
 ├── configs/
 │   └── dpscf_config.yaml
