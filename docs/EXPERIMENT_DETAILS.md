@@ -104,25 +104,11 @@ All 98 candidate-prior dimensions are standardized using statistics estimated fr
 
 For criterion $q$, let $s_j^{(q)}$ be the raw score of candidate prior $j$. Each criterion is independently normalized by
 
-$$
-\widetilde{s}_j^{(q)}
-=
-\frac{
-s_j^{(q)} - \min_l s_l^{(q)}
-}{
-\max_l s_l^{(q)} - \min_l s_l^{(q)} + \epsilon
-}.
-$$
+$$\widetilde{s}_j^{(q)}=\frac{s_j^{(q)} - \min_l s_l^{(q)}}{\max_l s_l^{(q)} - \min_l s_l^{(q)} + \epsilon}.$$
 
 The final score is
 
-$$
-S_j
-=
-\frac{1}{3}
-\sum_{q \in \{\mathrm{LR},\mathrm{ET},\mathrm{MI}\}}
-\widetilde{s}_j^{(q)}.
-$$
+$$S_j=\frac{1}{3}\sum_{q \in \{\mathrm{LR},\mathrm{ET},\mathrm{MI}\}}\widetilde{s}_j^{(q)}.$$
 
 Candidates are sorted by $S_j$ in descending order and the first $k=24$ dimensions are retained.
 
